@@ -1,12 +1,11 @@
 // Firebase client configuration for Ronyal Developers.
-// This file contains public web-app configuration, not a service-account key.
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
 import { getAuth } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
 import { getFirestore } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
 import { getStorage } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-storage.js";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAhI-vikmUNPIBuXgDT1rQNM1uHfY2E9Q",
+  apiKey: "AIzaSyAhI-vVikmUNPIBuXgDT1rQNM1uHfY2E9Q",
   authDomain: "ronyal-developers.firebaseapp.com",
   projectId: "ronyal-developers",
   storageBucket: "ronyal-developers.firebasestorage.app",
