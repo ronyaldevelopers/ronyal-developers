@@ -70,7 +70,7 @@ $("projectForm").addEventListener("submit", async (e) => {
     if (id) await updateDoc(doc(db,"projects",id),data);
     else await addDoc(collection(db,"projects"),{...data,createdAt:serverTimestamp()});
     clearForm(); status("manageStatus","Project saved."); await loadProjects();
-  } catch(err) { status("manageStatus","Could not save: " + err.message); }
+  } catch(err) { console.error("Project save error:", err); let detail = err?.message || err?.code || (typeof err === "string" ? err : "Unknown error. Check internet connection and Firebase settings."); if (err?.code) detail = err.code + " — " + detail; status("manageStatus","Could not save: " + detail); }
 });
 onAuthStateChanged(auth, async (user) => {
   if (!user) { loginPanel.classList.remove("hidden"); managePanel.classList.add("hidden"); return; }
