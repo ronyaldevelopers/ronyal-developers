@@ -25,7 +25,7 @@ async function compressImage(file) {
   if (data.length > 650000) throw new Error("Photo bohat bari hai. Choti image select karein.");
   return data;
 }
-\nfunction status(id, message) { $(id).textContent = message; }
+function status(id, message) { $(id).textContent = message; }
 function clearForm() {
   $("projectForm").reset(); $("projectId").value = ""; existingImageUrl = ""; $("imagePreview").textContent = ""; $("saveBtn").textContent = "Add project";
 }
