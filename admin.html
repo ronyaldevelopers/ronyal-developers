@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#10100f">
+<title>Admin | Ronyal Developers</title>
+<style>
+:root{color-scheme:dark;--bg:#10100f;--panel:#1a1916;--gold:#d9b878;--cream:#f5f0e6;--muted:#b9b2a5}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--cream);font:15px/1.6 Arial,sans-serif}.wrap{width:min(850px,92%);margin:45px auto}.top{display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap}.brand{color:var(--gold);font-weight:800;letter-spacing:2px;text-decoration:none}.panel{margin-top:25px;padding:25px;background:var(--panel);border:1px solid #373329}h1{font-size:32px;margin:10px 0}h2{font-size:21px;margin:0 0 15px}.muted{color:var(--muted)}label{display:block;margin:13px 0 5px;color:#ddd}input,textarea{width:100%;padding:12px;border:1px solid #514b40;background:#111;color:#fff;border-radius:3px;font:inherit}textarea{min-height:90px;resize:vertical}button,.btn{display:inline-block;border:1px solid var(--gold);background:var(--gold);color:#17140e;padding:11px 17px;font-weight:700;cursor:pointer;text-decoration:none;margin:12px 8px 0 0}button.secondary{background:transparent;color:var(--gold)}button.danger{background:#542b27;border-color:#8e5147;color:white}.hidden{display:none!important}.status{margin-top:12px;color:var(--gold);overflow-wrap:anywhere}.item{padding:15px 0;border-top:1px solid #373329}.item img{width:100%;max-height:180px;object-fit:cover;margin-top:8px}.item small{color:var(--muted)}@media(max-width:600px){.wrap{margin:22px auto}.panel{padding:18px}}
+</style>
+</head>
+<body><main class="wrap">
+<div class="top"><a class="brand" href="./index.html">RONYAL DEVELOPERS</a><a class="muted" href="./index.html">← View website</a></div>
+<h1>Website Admin</h1><p class="muted">Sign in to manage the projects shown on your website.</p>
+<section class="panel" id="loginPanel"><h2>Admin login</h2>
+<form id="loginForm"><label>Email</label><input id="email" type="email" autocomplete="username" required><label>Password</label><input id="password" type="password" autocomplete="current-password" required><button type="submit">Sign in</button></form><div class="status" id="loginStatus" role="status"></div></section>
+<section class="panel hidden" id="managePanel"><div class="top"><h2>Manage projects</h2><button class="secondary" id="logoutBtn" type="button">Sign out</button></div>
+<form id="projectForm"><input id="projectId" type="hidden"><label>Project title</label><input id="title" maxlength="80" required placeholder="e.g. Modern Living Room"><label>Category</label><input id="category" maxlength="50" placeholder="e.g. Interior Design"><label>Image URL</label><input id="imageUrl" type="url" required placeholder="https://..."><label>Description (optional)</label><textarea id="description" maxlength="400" placeholder="A short description"></textarea><button type="submit" id="saveBtn">Add project</button><button type="button" class="secondary" id="clearBtn">Clear</button></form>
+<div class="status" id="manageStatus" role="status"></div><h2 style="margin-top:28px">Published projects</h2><div id="projectList"><p class="muted">Loading projects…</p></div>
+</section></main><script type="module" src="./admin.js"></script></body></html>
